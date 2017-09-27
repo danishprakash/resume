@@ -1,0 +1,186 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex, colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{color,soul}
+\definecolor{lightblue}{rgb}{0.957,.941,0.837}
+\sethlcolor{lightblue}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\normalsize{
+    \textbf{#1}{#2}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\normalsize#3} & {\normalsize #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lfoot{\scriptsize{updated - 26/09/17}}
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://prakashdanish.github.io/}{\Large Danish Prakash}} &
+  \href{mailto:danishprakash@outlook.com}{\hl{danishprakash@outlook.com}}\\
+  \href{https://prakashdanish.github.io/}{\hl{http://www.danishprakash.com}} & +91 9821371321 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Amity University}{Noida, India}
+      {Bachelor of Technology in Computer Science;  CGPA: 7.46}{August 2014 -- July 2018}
+    \resumeSubheading
+      {Bal Bharati Public School}{Delhi, India}
+      {Class XII\textsuperscript{th} CBSE Board, Science;  86\%}{April 2012 -- May 2014}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {AT\&T}{Noida, India}
+      {Software Development Intern}{May -- June 2017}
+      \resumeItemListStart
+        \resumeItem{Developed}
+          { a Unix shell with basic functionality written in C.}
+        \resumeItem{Implemented}
+          { piping, history recollection and few builtin commands.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Sportido}{Noida, India}
+      {UX Designer}{July 2016 - Feb 2017}
+      \resumeItemListStart
+        \resumeItem{Created}
+          { engaging user interface for the android application to improve user interaction.}
+        \resumeItem{Improved}
+          { existing application's UI and created stickers and banners for expansion purposes.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{\href{https://github.com/prakashdanish/dash}{\hl{dash}}}
+      {:    Unix shell with basic functionality, piping and history recollection in C.}
+    \resumeSubItem{\href{https://github.com/prakashdanish/amizone-cli}{\hl{Amizone-CLI}}}
+      {:    CLI for my college portal for checking schedules, courses and attendance details in Python.}
+    \resumeSubItem{\href{https://github.com/prakashdanish/curator}{\hl{Curator}}}
+      {:    Android news application focusing on readability in Java using XMLPullParser.}
+
+  \resumeSubHeadingListEnd
+  
+ \section{Skill}
+    \resumeSubHeadingListStart
+        \resumeSubItem{Language}
+            {:    C, Python, C++, Java}
+        \resumeSubItem{Operating System}
+            {:    Linux, macOS, Windows}
+        \resumeSubItem{Technologies \& Tools}
+            {:    Git, GDB, Photoshop}
+            
+    \resumeSubHeadingListEnd
+
+\section{OSS Contribution}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+        {Coala}{}
+        {Language Independent Code Analysis}{}
+        \resumeItemListStart
+            \resumeItem{}
+            {coala OSS organization member}
+            \resumeItem{}
+            {1 PR Merged and reviewed several PRs}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\section{Volunteering}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+        {CRY}{}
+        {Child Rights \& You}{}
+        \resumeItemListStart
+            \resumeItem{}
+            {Designed graphics and presentation(s) for events}
+        \resumeItemListEnd
+    
+    \resumeSubHeadingListEnd
+    
+\section{Extra Curricular}
+    \resumeSubHeadingListStart
+        \resumeSubItem{}
+        {Competitive programming, badminton and reading}
+    
+    \resumeSubHeadingListEnd
+    
+\section{Extra}
+    \resumeSubHeadingListStart
+        \resumeSubItem{Languages}
+        {:    English, Hindi, German}
+            
+        \resumeSubItem{Links}
+        {:    \href{https://github.com/prakashdanish}{\hl{Github}}, \href{https://www.linkedin.com/in/danishprakash/}{\hl{LinkedIn}}}
+        
+    \resumeSubHeadingListEnd
+    
+
+\end{document}
