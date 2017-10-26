@@ -7,7 +7,7 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
+\usepackage[pdftex, colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{color,soul}
 \definecolor{lightblue}{rgb}{0.957,.941,0.837}
@@ -19,6 +19,7 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.375in}
@@ -66,14 +67,13 @@
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{document}
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\href{https://prakashdanish.github.io/}{\Large Danish Prakash}} &
-  \href{mailto:danishprakash@outlook.com}{danishprakash@outlook.com}\\
-  \href{https://prakashdanish.github.io/}{http://www.danishprakash.com} & +91 9821371321 \\
+  \href{mailto:danishprakash@outlook.com}{{danishprakash@outlook.com}}\\
+  \href{https://prakashdanish.github.io/}{{http://www.danishprakash.com}} & +91 9821371321 \\
 \end{tabular*}
 
 
@@ -108,9 +108,9 @@
       {UX Designer}{July 2016 - Feb 2017}
       \resumeItemListStart
         \resumeItem{Created}
-          { engaging user interface for the android application to improve user interaction.}
+          { engaging user interfaces for the android application to improve user interaction.}
         \resumeItem{Improved}
-          { existing application's UI and created stickers and banners for expansion purposes.}
+          { existing application's UI and other UX improvements to the application.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -119,14 +119,15 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{\href{https://github.com/prakashdanish/dash}{dash}}
-      {:    Unix shell with basic functionality, piping and history recollection in C.}
-    \resumeSubItem{\href{https://github.com/prakashdanish/amizone-cli}{Amizone-CLI}}
-      {:    CLI for my college portal for checking schedules, courses and attendance details in Python.}
-    \resumeSubItem{\href{https://github.com/prakashdanish/curator}{Curator}}
-      {:    Android news application focusing on readability in Java using XMLPullParser.}
-     \resumeSubItem{\href{https://github.com/prakashdanish/yafo}{yafo}}
-     {:     (Yet Another File Organizer) Organize your messy directories in a jiffy written in Python.}
+    \resumeSubItem{\href{https://github.com/prakashdanish/dash}{{dash}}}
+      {:    Unix shell with basic functionality, piping and history recollection, written in C.}
+    \resumeSubItem{\href{https://github.com/prakashdanish/amizone-cli}{{Amizone-CLI}}}
+      {:    CLI for college portal for checking class schedules, courses \& attendance details, in Python.}
+    \resumeSubItem{\href{https://github.com/prakashdanish/curator}{{Curator}}}
+      {:    Android news application focusing on readability, written in Java using XMLPullParser.}
+     \resumeSubItem{\href{https://github.com/prakashdanish/yafo}{{yafo}}}
+     {:     (Yet Another File Organizer) Organizes your messy directories in a jiffy, written in Python.}
+
   \resumeSubHeadingListEnd
   
  \section{Skill}
@@ -148,7 +149,6 @@
         {}
     \resumeSubHeadingListEnd
 
-
 \section{Volunteering}
     \resumeSubHeadingListStart
         \resumeSubheading
@@ -156,7 +156,7 @@
         {Child Rights \& You}{}
         \resumeItemListStart
             \resumeItem{}
-            {Designed graphics and presentation(s) for various events}
+            {Designed graphics and presentation(s) for various outreach \& awareness events.}
         \resumeItemListEnd
     
     \resumeSubHeadingListEnd
@@ -174,9 +174,12 @@
         {:    English, Hindi, German}
             
         \resumeSubItem{Links}
-        {:    \href{https://github.com/prakashdanish}{Github}, \href{https://www.linkedin.com/in/danishprakash/}{LinkedIn}}
+        {:    \href{https://github.com/prakashdanish}{{Github}}, \href{https://www.linkedin.com/in/danishprakash/}{{LinkedIn}}}
         
     \resumeSubHeadingListEnd
     
+    
+\lfoot{\scriptsize{updated - 14/10/17}}
+
 
 \end{document}
