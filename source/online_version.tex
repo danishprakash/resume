@@ -7,10 +7,12 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
+\usepackage{setspace}
 \usepackage[pdftex, colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{color,soul}
 \definecolor{lightblue}{rgb}{0.957,.941,0.837}
+\definecolor{mygray}{gray}{0.4}
 \sethlcolor{white}
 \usepackage{utopia}
 
@@ -53,7 +55,7 @@
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & {\small #2} \\
-      \textit{\normalsize#3} & {\normalsize #4} \\
+      \text{\normalsize#3} & {\normalsize #4} \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -71,12 +73,17 @@
 
 \begin{document}
 
+\begin{center}
+    \textbf{\Large{DANISH PRAKASH}} \\
+    \href{https://prakashdanish.github.io/}{{danishprakash.com}} &  \href{mailto:danishprakash@outlook.com}{{ -  danishprakash@outlook.com}} \\
+    \text{{+91 9821371321}} & \text{{New Delhi, India}}
+\end{center}
+
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://prakashdanish.github.io/}{\Large DANISH PRAKASH}} &
-  \href{mailto:danishprakash@outlook.com}{\hl{danishprakash@outlook.com}}\\
-  \href{https://prakashdanish.github.io/}{\hl{http://www.danishprakash.com}} & +91 9821371321 \\
-\end{tabular*}
+%\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%  \href{mailto:danishprakash@outlook.com}{\hl{danishprakash@outlook.com}}\\
+%  \href{https://prakashdanish.github.io/}{\hl{http://www.danishprakash.com}%} & +91 9821371321 \\
+%\end{tabular*}
 
 
 %-----------EDUCATION-----------------
@@ -91,14 +98,17 @@
   \resumeSubHeadingListEnd
 
 
+
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
-  
+  \renewcommand{\baselinestretch}{0.5}
+
       \resumeSubheading
       {SocialCops} {Delhi, India}
       {Software Engineering Intern}{Feb '18 - May '18}
       \resumeItemListStart
+        \setspac
         \resumeItem{}
         {Developed an Alexa skill which for user tunnel based queries for internal use as my hackweek task.}
         \resumeItem{}
@@ -133,22 +143,21 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
+      \resumeSubItem{\href{https://github.com/prakashdanish/vim-githubinator}{\hl{vim-githubinator}}}
+      {:     Vim plugin to show selected text on Github remote written in Vimscript.}
     \resumeSubItem{\href{https://github.com/prakashdanish/goodreadsh}{\hl{goodreadsh}}}
       {:     Command line interface for Goodreads.com written in Bash.}
     \resumeSubItem{\href{https://github.com/prakashdanish/vim-zen}{\hl{vim-zen}}}
-      {:     Barebones Vim plugin manager with multithreading written in Vimscript.}
-    \resumeSubItem{GithubFS}
+      {:     Barebones Vim plugin manager with multithreading written in Vimscript and Python.}
+    \resumeSubItem{\href{https://github.com/prakashdanish/githubfs}{GithubFS}}
       {:    Read only virtual filesystem for Github using FUSE written in Python.}
     \resumeSubItem{\href{https://github.com/prakashdanish/dash}{\hl{dash}}}
       {:    Unix shell with basic functionality, piping and history recollection written in C.}
     \resumeSubItem{\href{https://github.com/prakashdanish/amizone-cli}{\hl{amizone-cli}}}
       {:    CLI for college portal for checking class schedules, courses \& more written in Python.}
-      \resumeSubItem{\href{https://github.com/prakashdanish/vimport}{\hl{vimport}}}
-      {:     Vim plugin to quickly import and drop modules in Python written in Vimscript.}
     \resumeSubItem{\href{https://www.amazon.com/Danish-Prakash-Chapelle-Wisdom/dp/B07B3YT38D}{\hl{Chappelle Wisdom}}}
       {:     Amazon Alexa skill that helps uplift your mood written in Python.}  
      
-
   \resumeSubHeadingListEnd
   
  \section{Skills}
@@ -209,7 +218,7 @@
     \resumeSubHeadingListEnd
     
     
-\lfoot{\scriptsize{updated - 2018/07/18}}
+\lfoot{\scriptsize{\textcolor{mygray}{updated - 2018/08/01}}}
 
 
 
