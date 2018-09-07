@@ -8,13 +8,27 @@
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage{setspace}
+\usepackage{utopia}
+\usepackage{ulem}
+\usepackage{contour}
 \usepackage[pdftex, colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{color,soul}
 \definecolor{lightblue}{rgb}{0.957,.941,0.837}
+\definecolor{lightyellow}{rgb}{1.0, 0.98, 0.8}
 \definecolor{mygray}{gray}{0.4}
-\sethlcolor{white}
-\usepackage{utopia}
+\sethlcolor{lightyellow}
+
+
+% underline decorations
+\renewcommand{\ULdepth}{2.2pt}
+\contourlength{0.8pt}
+
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
 
 
 \pagestyle{fancy}
@@ -55,7 +69,7 @@
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & {\small #2} \\
-      \text{\normalsize#3} & {\normalsize #4} \\
+      \text{\normalsize#3} & {\small #4} \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -75,7 +89,7 @@
 
 \begin{center}
     \textbf{\Large{DANISH PRAKASH}} \\
-    \href{https://prakashdanish.github.io/}{{danishprakash.com}} &  \href{mailto:danishprakash@outlook.com}{{ -  danishprakash@outlook.com}} \\
+    \href{https://prakashdanish.github.io/}{\color{blue}\myuline{danishprakash.com}}  \href{mailto:danishprakash@outlook.com}{{ -  \color{blue}\myuline{danishprakash@outlook.com}}} \\
     \text{{+91 9821371321}} & \text{{New Delhi, India}}
 \end{center}
 
@@ -110,11 +124,11 @@
       \resumeItemListStart
         \setspac
         \resumeItem{}
+        {Refactored an internal utility into a Python package making it easier to distribute and extend.}
+        \resumeItem{}
+        {Increased user retention on web platform by implementing search filters by tags and names.}
+        \resumeItem{}
         {Developed an Alexa skill which for user tunnel based queries for internal use as my hackweek task.}
-        \resumeItem{}
-        {Refactored an internal utility written in Python to improve usability and extensibility.}
-        \resumeItem{}
-        {Increased user retention on web platform by implementing search filters.}
       \resumeItemListEnd
     
     \resumeSubheading
@@ -122,9 +136,9 @@
       {Software Development Intern}{May '17 - Jun '17}
       \resumeItemListStart
         \resumeItem{}
-          {Developed a minimal Unix shell in C.}
+          {Developed a functional command-line interpretor(shell) in C for Unix based systems.}
         \resumeItem{}
-          {Programmed the shell with command piping \& history recollection.}
+          {Feature set included command piping, history recollection, \& colored stdout.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -143,20 +157,20 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-      \resumeSubItem{\href{https://github.com/prakashdanish/vim-githubinator}{\hl{vim-githubinator}}}
-      {:     Vim plugin to show selected text on Github remote written in Vimscript.}
-    \resumeSubItem{\href{https://github.com/prakashdanish/goodreadsh}{\hl{goodreadsh}}}
-      {:     Command line interface for Goodreads.com written in Bash.}
-    \resumeSubItem{\href{https://github.com/prakashdanish/vim-zen}{\hl{vim-zen}}}
-      {:     Barebones Vim plugin manager with multithreading written in Vimscript and Python.}
-    \resumeSubItem{\href{https://github.com/prakashdanish/githubfs}{GithubFS}}
-      {:    Read only virtual filesystem for Github using FUSE written in Python.}
-    \resumeSubItem{\href{https://github.com/prakashdanish/dash}{\hl{dash}}}
-      {:    Unix shell with basic functionality, piping and history recollection written in C.}
-    \resumeSubItem{\href{https://github.com/prakashdanish/amizone-cli}{\hl{amizone-cli}}}
-      {:    CLI for college portal for checking class schedules, courses \& more written in Python.}
-    \resumeSubItem{\href{https://www.amazon.com/Danish-Prakash-Chapelle-Wisdom/dp/B07B3YT38D}{\hl{Chappelle Wisdom}}}
-      {:     Amazon Alexa skill that helps uplift your mood written in Python.}  
+    \resumeSubItem{\href{https://github.com/prakashdanish/vim-zen}{\color{blue}\myuline{\normalfont{vim-zen}}}}
+      {: Minimalistic Vim plugin manager with multithreading written in Vimscript and Python.}
+      \resumeSubItem{\href{https://github.com/prakashdanish/vim-githubinator}{\color{blue}\myuline{\normalfont{vim-githubinator}}}}
+      {: Vim plugin to show selected text on Github remote written in Vimscript.}
+    \resumeSubItem{\href{https://github.com/prakashdanish/goodreadsh}{\color{blue}\myuline{\normalfont{goodreadsh}}}}
+      {: Command line interface for Goodreads.com written in Bash.}
+        \resumeSubItem{\href{https://github.com/prakashdanish/githubfs}{\color{blue}\myuline{\normalfont{GithubFS}}}}
+      {: Read only virtual filesystem for Github using FUSE written in Python.}
+    \resumeSubItem{\href{https://github.com/prakashdanish/dash}{\color{blue}\myuline{\normalfont{\normalfont{dash}}}}}
+      {: Unix shell with basic functionality, piping and history recollection written in C.}
+    \resumeSubItem{\href{https://github.com/prakashdanish/amizone-cli}{\color{blue}\myuline{\normalfont{amizone-cli}}}}
+      {: CLI for college portal for checking class schedules, courses \& more written in Python.}
+    \resumeSubItem{\href{https://www.amazon.com/Danish-Prakash-Chapelle-Wisdom/dp/B07B3YT38D}{\color{blue}\myuline{\normalfont{Chappelle Wisdom}}}}
+      {: Amazon Alexa skill that helps uplift your mood written in Python.}  
      
   \resumeSubHeadingListEnd
   
@@ -175,8 +189,8 @@
         \resumeSubItem{Google Code-In 2017}
         { - Mentor}
       
-        \resumeSubItem{Coala (Language Independent Code Analysis)}
-        { - Contributor}
+        \resumeSubItem{Contributor}
+        { - GNOME, Coala, CPython, Neovim}
 %        \resumeSubItem{FOSS Asia}
 %        {}
     \resumeSubHeadingListEnd
@@ -212,13 +226,13 @@
             
         \resumeSubItem{Links}
         {:    
-        \href{https://github.com/prakashdanish}{\hl{Github}},         
-        \href{https://www.linkedin.com/in/prakashdanish/}{\hl{LinkedIn}}}
+        \href{https://github.com/prakashdanish}{\color{blue}\myuline{Github}}, 
+        \href{https://www.linkedin.com/in/prakashdanish/}{\color{blue}\myuline{LinkedIn}}}
         
     \resumeSubHeadingListEnd
     
     
-\lfoot{\scriptsize{\textcolor{mygray}{updated - 2018/08/01}}}
+\lfoot{\scriptsize{\textcolor{mygray}{updated - 2018/08/25}}}
 
 
 
