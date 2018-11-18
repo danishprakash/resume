@@ -1,4 +1,4 @@
-\documentclass[letterpaper,10.5pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -7,12 +7,29 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{utopia}
+\usepackage{ulem}
+\usepackage{contour}
+
 \usepackage[pdftex, colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{color,soul}
 \definecolor{lightblue}{rgb}{0.957,.941,0.837}
-\sethlcolor{white}
-\usepackage{utopia}
+\definecolor{lightyellow}{rgb}{1.0, 0.98, 0.8}
+\definecolor{mygray}{gray}{0.4}
+\sethlcolor{lightyellow}
+
+
+% underline decorations
+\renewcommand{\ULdepth}{2.2pt}
+\contourlength{0.8pt}
+
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
 
 
 \pagestyle{fancy}
@@ -52,8 +69,8 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & {\small #2} \\
-      \textit{\normalsize#3} & {\normalsize #4} \\
+      \textbf{#1} & {\small #4} \\
+      \text{\normalsize#3} & {\small \textit{#2}}\\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -71,12 +88,17 @@
 
 \begin{document}
 
+\begin{center}
+    \textbf{\Large{DANISH PRAKASH}} \\
+    \href{https://danishprakash.github.io/}{{danishprakash.com}}  \href{mailto:danishprakash@outlook.com}{{ ¥  {danishprakash@outlook.com}}} \\
+    \text{{+91 9821371321}} & \text{{New Delhi, India}}
+\end{center}
+
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://prakashdanish.github.io/}{\Large DANISH PRAKASH}} &
-  \href{mailto:danishprakash@outlook.com}{\hl{danishprakash@outlook.com}}\\
-  \href{https://prakashdanish.github.io/}{\hl{http://www.danishprakash.com}} & +91 9821371321 \\
-\end{tabular*}
+%\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%  \href{mailto:danishprakash@outlook.com}{\hl{danishprakash@outlook.com}}\\
+%  \href{https://danishprakash.github.io/}{\hl{http://www.danishprakash.com}%} & +91 9821371321 \\
+%\end{tabular*}
 
 
 %-----------EDUCATION-----------------
@@ -84,47 +106,60 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Amity University}{Noida, India}
-      {Bachelor of Technology in Computer Science;  CGPA: 7.27}{Aug '14 -- Jul '18}
+      {Bachelor of Technology in Computer Science;  CGPA: 7.27}{August 2014 - November 2018}\vspace{0.3em}
     \resumeSubheading
-      {Bal Bharati Public School}{\small Delhi, India}
-      {Class XII\textsuperscript{th} CBSE Board, Science;  86\%}{Apr '12 -- May '14}
+      {Bal Bharati Public School}{ Delhi, India}
+      {Class XII\textsuperscript{th} CBSE Board, Science;  86\%}{April 2012 - May 2014}\vspace{0.3em}
   \resumeSubHeadingListEnd
+
 
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
-  
+  \renewcommand{\baselinestretch}{0.5}
+ 
+    \resumeSubheading
+      {DataGrokr} {Delhi, India}
+      {Software Engineering Intern}{November 2018 - Present}
+      \resumeItemListStart
+        \setspac
+        \resumeItem{}
+        {Implemented CSV export functionality onto a ReactJS based web application.}
+      \resumeItemListEnd 
+
       \resumeSubheading
       {SocialCops} {Delhi, India}
-      {Software Engineering Intern}{Feb '18 - May '18}
+      {Software Engineering Intern}{February 2018 - May 2018}
       \resumeItemListStart
+        \setspac
         \resumeItem{}
-        {Developed an Alexa skill which for user tunnel based queries for internal use as my hackweek task.}
+        {Rewrote a Python application used for retrieving funnel data from the database and turned it into a package.}
         \resumeItem{}
-        {Refactored an internal utility written in Python to improve usability and extensibility.}
+        {Increased user retention on web platform by implementing search filters by tags and names.}
         \resumeItem{}
-        {Increased user retention on web platform by implementing search filters.}
+        {Developed an Alexa skill which responds to funnel based queries using real-time data hosted from AWS Lambda.}\vspace{0.3em}
       \resumeItemListEnd
     
     \resumeSubheading
       {AT\&T}{Noida, India}
-      {Software Development Intern}{May '17 - Jun '17}
+      {Software Development Intern}{May 2017 - June 2017}
       \resumeItemListStart
         \resumeItem{}
-          {Developed a minimal Unix shell in C.}
+          {Developed a functional command-line interpretor(shell) in C for Unix based 
+          systems.}
         \resumeItem{}
-          {Programmed the shell with command piping \& history recollection.}
+          {Feature set includes piping commands, history recollection, \& colored output.}\vspace{0.3em}
       \resumeItemListEnd
 
     \resumeSubheading
       {Sportido}{Noida, India}
-      {UX Designer}{Jul '16 - Feb '17}
+      {UX Designer}{July 2016 - February 2017}
       \resumeItemListStart
          \resumeItem{}
          {Illustrated UI wireframes for the iOS application.}
         \resumeItem{}
-          {Redesigned the UI for the android application as per material guidelines.}
+          {Redesigned the UI for the android application as per material guidelines.}\vspace{0.3em}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -133,30 +168,27 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{\href{https://github.com/prakashdanish/goodreadsh}{\hl{goodreadsh}}}
-      {:     Command line interface for Goodreads.com written in Bash.}
-    \resumeSubItem{\href{https://github.com/prakashdanish/vim-zen}{\hl{vim-zen}}}
-      {:     Barebones Vim plugin manager with multithreading written in Vimscript.}
-    \resumeSubItem{GithubFS}
-      {:    Read only virtual filesystem for Github using FUSE written in Python.}
-    \resumeSubItem{\href{https://github.com/prakashdanish/dash}{\hl{dash}}}
-      {:    Unix shell with basic functionality, piping and history recollection written in C.}
-    \resumeSubItem{\href{https://github.com/prakashdanish/amizone-cli}{\hl{amizone-cli}}}
-      {:    CLI for college portal for checking class schedules, courses \& more written in Python.}
-      \resumeSubItem{\href{https://github.com/prakashdanish/vimport}{\hl{vimport}}}
-      {:     Vim plugin to quickly import and drop modules in Python written in Vimscript.}
-    \resumeSubItem{\href{https://www.amazon.com/Danish-Prakash-Chapelle-Wisdom/dp/B07B3YT38D}{\hl{Chappelle Wisdom}}}
-      {:     Amazon Alexa skill that helps uplift your mood written in Python.}  
+      \resumeSubItem{{\textbf{pysplice}}}
+      {: A Python interface to splice(2) system call written in C.}
+    \resumeSubItem{\href{https://github.com/danishprakash/vim-zen}{{\textbf{vim-zen}}}}
+      {: Minimalistic Vim plugin manager with multithreading written in Vimscript and Python.}
+      \resumeSubItem{\href{https://github.com/danishprakash/vim-githubinator}{{\textbf{vim-githubinator}}}}
+      {: Vim plugin to show selected text on Github remote written in Vimscript.}
+    \resumeSubItem{\href{https://github.com/danishprakash/goodreadsh}{{\textbf{goodreadsh}}}}
+      {: Command line interface for Goodreads.com written in Bash.}
+        \resumeSubItem{\href{https://github.com/danishprakash/githubfs}{{\textbf{GithubFS}}}}
+      {: Read only virtual filesystem for Github using FUSE written in Python.}
+    \resumeSubItem{\href{https://github.com/danishprakash/amizone-cli}{{\textbf{amizone-cli}}}}
+      {: CLI for college portal for checking class schedules, courses \& more written in Python.}
      
-
   \resumeSubHeadingListEnd
   
  \section{Skills}
     \resumeSubHeadingListStart
         \resumeSubItem{Language}
-            {:    Python, C/C++, Vimscript, Bash, JavaScript}
-        \resumeSubItem{Technologies \& Tools}
-            {:    Git, GDB, MongoDB, Adobe Photoshop}
+            {:    Python, C/C++, JavaScript, Vimscript, Bash , Django, Flask, ReactJS}
+        \resumeSubItem{Tools}
+            {:    Git, MongoDB, GDB, GCC, Vim}
             
     \resumeSubHeadingListEnd
 
@@ -166,50 +198,40 @@
         \resumeSubItem{Google Code-In 2017}
         { - Mentor}
       
-        \resumeSubItem{Coala (Language Independent Code Analysis)}
-        { - Contributor}
+        \resumeSubItem{Contributor}
+        { - GNOME, CPython, Microsoft, GNU, Google}
 %        \resumeSubItem{FOSS Asia}
 %        {}
     \resumeSubHeadingListEnd
 
-%\section{Volunteering}
-%    \resumeSubHeadingListStart
-%        \resumeSubheading
-%        {CRY}{}
-%        {Child Rights \& You}{}
-%        \resumeItemListStart
-%            \resumeItem{}
-%            {Designed graphics and presentation(s) for various outreach \& awareness events.}
-%        \resumeItemListEnd
-
 \section{Volunteering}
   \resumeSubHeadingListStart
         \resumeSubItem{Child Rights \& You (CRY)}
-        {:    Graphic Designer (North Delhi Team)}
+        {: Designer (North Delhi Team)}
         
     \resumeSubHeadingListEnd
     
-\section{Extra Curricular}
-    \resumeSubHeadingListStart
-        \resumeSubItem{}
-        {Sport programming, badminton and reading.}
+% \section{Extra Curricular}
+%     \resumeSubHeadingListStart
+%         \resumeSubItem{}
+%         {Sport programming, badminton and reading.}
     
-    \resumeSubHeadingListEnd
+%     \resumeSubHeadingListEnd
     
 \section{Extra}
     \resumeSubHeadingListStart
         \resumeSubItem{Languages}
-        {:    English, Hindi, German}
+        {: English, Hindi, German}
             
         \resumeSubItem{Links}
         {:    
-        \href{https://github.com/prakashdanish}{\hl{Github}},         
-        \href{https://www.linkedin.com/in/prakashdanish/}{\hl{LinkedIn}}}
+        \href{https://github.com/danishprakash}{Github}, 
+        \href{https://www.linkedin.com/in/danishprakash/}{LinkedIn}}\vspace{1em}
         
     \resumeSubHeadingListEnd
     
     
-\lfoot{\scriptsize{updated - 2018/07/18}}
+\lfoot{\scriptsize{\textcolor{mygray}{updated - 2018/11/17}}}
 
 
 
