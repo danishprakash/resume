@@ -1,4 +1,4 @@
-\documentclass[letterpaper,10pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -7,28 +7,26 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage{setspace}
-\usepackage{utopia}
-\usepackage{ulem}
-\usepackage{contour}
-\usepackage[pdftex, colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
-\usepackage{color,soul}
-\definecolor{lightblue}{rgb}{0.957,.941,0.837}
-\definecolor{lightyellow}{rgb}{1.0, 0.98, 0.8}
-\definecolor{mygray}{gray}{0.4}
-\sethlcolor{lightyellow}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+\usepackage{float}
 
 
-% underline decorations
-\renewcommand{\ULdepth}{2.2pt}
-\contourlength{0.8pt}
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
 
-\newcommand{\myuline}[1]{%
-  \uline{\phantom{#1}}%
-  \llap{\contour{white}{#1}}%
-}
-
+% serif
+% \usepackage{CormorantGaramond}
+\usepackage{charter}
 
 
 \pagestyle{fancy}
@@ -36,15 +34,15 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\renewcommand{\baselinestretch}{1}
 
+% \usepackage[a4paper,left=3cm,width=13cm,right=4cm]{geometry}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\oddsidemargin}{-0.65in}
+\addtolength{\evensidemargin}{-0.65in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.65in}
+\addtolength{\textheight}{1.3in}
 
 \urlstyle{same}
 
@@ -57,172 +55,285 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\normalsize{
-    \textbf{#1}{#2}
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & {\small #4} \\
-      \text{\normalsize#3} & {\small \textit{#2}}\\
-    \end{tabular*}\vspace{-5pt}
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
 
-\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeOrganizationHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
+%----------HEADING----------
+
 \begin{center}
-    \textbf{\Large{DANISH PRAKASH}} \\
-    \href{https://danishprakash.github.io/}{{danishprakash.com}}  \href{mailto:danishprakash@outlook.com}{{ ¥  {danishprakash@outlook.com}}} \\
-    \text{{+91 9821371321}} & \text{{New Delhi, India}}
+    \textbf{\Huge Danish Prakash} \\ \vspace{3pt}
+    \small
+    \faMobile \hspace{.5pt} \href{tel:+919821371321}{+919821371321}
+    $|$
+    \faEnvelope \hspace{.5pt} \href{mailto:danishprakash@outlook.com}{danishprakash@outlook.com}
+    $|$
+    \faGlobe \hspace{.5pt} \href{https://danishpraka.sh/}{danishpraka.sh}
+    $|$
+    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/danishprakash}{danishprakash}
+    $|$
+    \faGithub \hspace{.5pt} \href{https://github.com/danishprakash}{danishprakash}
 \end{center}
 
 
-%-----------EDUCATION-----------------
+
+%-----------EDUCATION-----------
+
 \section{Education}
+  \vspace{3pt}
   \resumeSubHeadingListStart
+
     \resumeSubheading
-      {Amity University}{Noida, India}
-      {Bachelor of Technology in Computer Science;  CGPA: 7.27}{August 2014 - November 2018}\vspace{0.3em}
-    \resumeSubheading
-      {Bal Bharati Public School}{ Delhi, India}
-      {Class XII\textsuperscript{th} CBSE Board, Science;  86\%}{April 2012 - May 2014}\vspace{0.3em}
+      {Amity University
+      }{Delhi, India}
+      {Bachelor of Technology in Computer Science and Engineering}{July 2014 \textbf{--} July 2018}
   \resumeSubHeadingListEnd
 
 
 
-%-----------EXPERIENCE-----------------
+%-----------EXPERIENCE-----------
+
+% SSE
+% =====================
 \section{Experience}
+  \vspace{3pt}
   \resumeSubHeadingListStart
-  \renewcommand{\baselinestretch}{0.5}
- 
-    \resumeSubheading
-      {DataGrokr} {Delhi, India}
-      {Software Engineering Intern}{November 2018 - Present}
-      \resumeItemListStart
-        \setspac
-        \resumeItem{}
-        {Implemented CSV export functionality onto a ReactJS based web application.}
-      \resumeItemListEnd 
-
-      \resumeSubheading
-      {SocialCops} {Delhi, India}
-      {Software Engineering Intern}{February 2018 - May 2018}
-      \resumeItemListStart
-        \setspac
-        \resumeItem{}
-        {Rewrote a Python application used for retrieving funnel data from the database and turned it into a package.}
-        \resumeItem{}
-        {Increased user retention on web platform by implementing search filters by tags and names.}
-        \resumeItem{}
-        {Developed an Alexa skill which responds to funnel based queries using real-time data hosted from AWS Lambda.}\vspace{0.3em}
-      \resumeItemListEnd
-    
-    \resumeSubheading
-      {AT\&T}{Noida, India}
-      {Software Development Intern}{May 2017 - June 2017}
-      \resumeItemListStart
-        \resumeItem{}
-          {Developed a functional command-line interpretor(shell) in C for Unix based 
-          systems.}
-        \resumeItem{}
-          {Feature set includes piping commands, history recollection, \& colored output.}\vspace{0.3em}
-      \resumeItemListEnd
 
     \resumeSubheading
-      {Sportido}{Noida, India}
-      {UX Designer}{July 2016 - February 2017}
-      \resumeItemListStart
-         \resumeItem{}
-         {Illustrated UI wireframes for the iOS application.}
-        \resumeItem{}
-          {Redesigned the UI for the android application as per material guidelines.}\vspace{0.3em}
-      \resumeItemListEnd
+      {HackerRank}{Remote}
+      {Senior Software Engineer}{Jan 2022 \textbf{--}}
+        \resumeItemListStart
+            \resumeItem{Infrastructure initiatives: k8s cluster upgrades, cost optimizations, NFS migration, scaling, while serving over 15M rpd}
+            \resumeItem{Improving org-wide oncall process by setting up onboarding for new members, facilitating hand-off, etc.}
+            \resumeItem{Handling end-to-end lifecycle for Coderunner, from Infrastructure, application development, and product planning.}
+            \resumeItem{Added WebSocket-based livestatus feature to show live submission status in HackerRank Community leveraging Socket.io. Wrote 3rd party \href{https://github.com/danishprakash/socket.io-go-emitter}{\text{\color{blue}Go}} and \href{https://github.com/danishprakash/socket.io-cpp-emitter}{\text{\color{blue}C++}} SDKs for the same. }
+            \resumeItem{Solved control plane overload by developing an in-house k8s controller which ensures step scaling for all workloads.}
+            \resumeItem{Led a team of 4 to deliver language environment-related product features serving over 10M developers. }
+        \resumeItemListEnd
 
-  \resumeSubHeadingListEnd
+
+% SDE 2
+% =====================
+
+% * Wrote a containerized microservice to evaluate database questions (MySQL, Oracle & MSSQL) resulting reduced avg response times and improved scalability.
+% * Worked on rewriting the code execution service leveraging various Linux features (cgroups, containers, rlimits, namespaces etc).
+% * Wrote the end-to-end deployment pipelines (CD) for different services of the application.
+% * Worked on a deployment tool assisting developers with deployment as part of Hack Week.
+% * Analysing customer feedbacks and supporting new runtimes based on requirement and managing the upgrades for existing runtimes used by all HackerRank products.
+
+    \resumeSubheading
+      {HackerRank}{Bengaluru, India}
+      {Software Engineer II}{Oct 2020 \textbf{--} Dec 2021}
+        \resumeItemListStart
+            \resumeItem{Built the backend for running & evaluating Database submissions in a containerized environment handling 2.5M rpd}
+            \resumeItem{Managed the Deploy and Infrastructure pipeline for the core remote code execution service.}
+            \resumeItem{Implemented multiple application features, leveraging Linux features such as cgroups, rlimits, namespaces, etc.}
+            \resumeItem{Wrote various Lambdas to handle production integration tests for uptime, regression testing, and traffic routing, etc}
+        \resumeItemListEnd
 
 
-%-----------PROJECTS-----------------
+
+% SDE 1
+% =====================
+    \resumeSubheading
+      {HackerRank}{Bengaluru, India}
+      {Software Engineer}{Jun 2019 \textbf{--} Sep 2020}
+        \resumeItemListStart
+            \resumeItem{Improving candidate experience by supporting over 40+ popular runtimes in a containerized environment.}
+            \resumeItem{Worked on efficient infra scaling during high-scale events. Involved writing scripts to automate scale up/ down events.}
+        \resumeItemListEnd
+
+% INTERN II
+% =====================
+    \resumeSubheading
+      {HackerRank}{Bengaluru, India}
+      {Software Engineering Intern}{Jan 2019 \textbf{--} May 2019}
+        \resumeItemListStart
+            \resumeItem{Primarily worked on the development of HackerRank's core remote code execution service, Coderunner.}
+            \resumeItem{Implemented a reverse-proxy to support streaming stdout/stderr streams between client and server.}
+            \resumeItem{Extended an open source web interface for git, klaus, with a dynamic file explorer, in Python.}
+        \resumeItemListEnd
+
+% * Added support for various runtimes as part of the migration to the new remote code execution service.
+% * POC: Wrote a package which facilitates a request-scoped logger instance using Golang¿s Context library.
+% * POC: Wrote a reverse proxy to support streaming stdout/stderr streams between a client and server.
+% * POC: Implemented dynamic file explorer in an open source web interface for git, klaus, written in Python
+
+
+% INTERN I
+% =====================
+    \resumeSubheading
+      {Atlan (SocialCops)}{Delhi, India}
+      {Software Development Intern}{Feb 2018 \textbf{--} May 2018}
+        \resumeItemListStart
+            \resumeItem{Built a Python package which helped various teams internally to gather data and insights.}
+            \resumeItem{Implemented search filters on the web application to increase user retention.}
+            % \resumeItem{Built a fully-functional Alexa bot to help teams to access customer funnel data with voice.}
+        \resumeItemListEnd
+
+% Tech stack: Python, Javascript (nodejs), MongoDB, Helm
+    \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS----------- TABLE FORMAT +1
+% \section{Projects}
+% \newcolumntype{m}{>{\hsize=.22\hsize}X}
+% \newcolumntype{s}{>{\hsize=.78\hsize}X}
+% \begin{table}[htbp]
+%     \def\arraystretch{1.25}
+%     \setlength\tabcolsep{5}
+%     \centering
+%     \begin{tabularx}{\linewidth}{|m| s|}
+%         \hline
+%         \href{https://github.com/danishprakash/gosortstructs}{{\textbf{\color{blue}gosortstructs}}}     & {Tool to sort Go structs for better diffs and readability using AST.}     \\ \hline
+%         \href{https://github.com/danishprakash/kube-step-podautoscaler}{{\textbf{\color{blue}kube-step-autoscaler}}}         & {Custom k8s controller to scale deployments in defined steps (step-scaling).}        \\ \hline
+%         \href{https://github.com/danishprakash/py-splice}{{\textbf{\color{blue}py-splice}}}         & {A Python interface to splice(2) system call written in C.}         \\ \hline
+%         \href{https://github.com/danishprakash/vim-zen}{{\textbf{\color{blue}vim-zen}}}         & {Minimalistic Vim plugin manager with multithreading written in Vimscript and Python.}         \\ \hline
+%         \href{https://github.com/danishprakash/vim-docker}{{\textbf{\color{blue}vim-docker}}}         & {Vim plugin to interact with Docker daemon written in Vimscript.}         \\ \hline
+%     \end{tabularx}
+% \end{table}
+
+
+%-----------PROJECTS----------- LIST FORMAT
 \section{Projects}
   \resumeSubHeadingListStart
-      \resumeSubItem{{\textbf{pysplice}}}
-      {: A Python interface to splice(2) system call written in C.}
-    \resumeSubItem{\href{https://github.com/danishprakash/vim-zen}{{\textbf{vim-zen}}}}
-      {: Minimalistic Vim plugin manager with multithreading written in Vimscript and Python.}
-      \resumeSubItem{\href{https://github.com/danishprakash/vim-githubinator}{{\textbf{vim-githubinator}}}}
-      {: Vim plugin to show selected text on Github remote written in Vimscript.}
-    \resumeSubItem{\href{https://github.com/danishprakash/goodreadsh}{{\textbf{goodreadsh}}}}
-      {: Command line interface for Goodreads.com written in Bash.}
-        \resumeSubItem{\href{https://github.com/danishprakash/githubfs}{{\textbf{GithubFS}}}}
-      {: Read only virtual filesystem for Github using FUSE written in Python.}
-    \resumeSubItem{\href{https://github.com/danishprakash/amizone-cli}{{\textbf{amizone-cli}}}}
-      {: CLI for college portal for checking class schedules, courses \& more written in Python.}
-     
+    \resumeSubItem{\href{https://github.com/danishprakash/gosortstructs}{{\text{\color{blue}gosortstructs}}}}
+      {: Tool to sort Go structs for better diffs and readability using AST.} \vspace{0pt}
+    \resumeSubItem{\href{https://github.com/danishprakash/kube-step-podautoscaler}{{\text{\color{blue}kube-step-podautoscaler}}}}  \vspace{0pt}
+      {: Kubernetes controller to scale deployments in defined steps (step-scaling).} \vspace{0pt}
+    \resumeSubItem{\href{https://github.com/danishprakash/py-splice}{{\text{\color{blue}py-splice}}}}
+      {: A Python interface to splice(2) system call written in C.} \vspace{0pt}
+    \resumeSubItem{\href{https://github.com/danishprakash/vim-zen}{{\text{\color{blue}vim-zen}}}}
+      {: Minimalistic Vim plugin manager with multithreading written in Vimscript and Python.} \vspace{0pt}
+    \resumeSubItem{\href{https://github.com/danishprakash/vim-docker}{{\text{\color{blue}vim-docker}}}}
+      {: Vim plugin to interact with Docker daemon written in Vimscript.} \vspace{0pt}
+    % \resumeSubItem{\href{https://github.com/danishprakash/githubfs}{{\textbf{GithubFS}}}}
+    %   {: Read only virtual filesystem for Github using FUSE written in Python.}
+
   \resumeSubHeadingListEnd
-  
- \section{Skills}
-    \resumeSubHeadingListStart
-        \resumeSubItem{Language}
-            {:    Python, C/C++, JavaScript, Vimscript, Bash , Django, Flask, ReactJS}
-        \resumeSubItem{Tools}
-            {:    Git, MongoDB, GDB, GCC, Vim}
-            
-    \resumeSubHeadingListEnd
 
-\section{OSS Contributions}
-    \resumeSubHeadingListStart
-    
-        \resumeSubItem{Google Code-In 2017}
-        { - Mentor}
-      
-        \resumeSubItem{Contributor}
-        { - GNOME, Coala, CPython, Neovim}
 
-    \resumeSubHeadingListEnd
 
-\section{Volunteering}
+%-----------TECHNICAL SKILLS-----------
+
+\section{Open Source Contributions}
+  \vspace{1pt}
   \resumeSubHeadingListStart
-        \resumeSubItem{Child Rights \& You (CRY)}
-        {: Designer (North Delhi Team)}
-        
-    \resumeSubHeadingListEnd
-    
-% \section{Extra Curricular}
-%     \resumeSubHeadingListStart
-%         \resumeSubItem{}
-%         {Sport programming, badminton and reading.}
-    
-%     \resumeSubHeadingListEnd
-    
-\section{Extra}
-    \resumeSubHeadingListStart
-        \resumeSubItem{Languages}
-        {: English, Hindi, German}
-            
-        \resumeSubItem{Links}
-        {:    
-        \href{https://github.com/danishprakash}{Github}, 
-        \href{https://www.linkedin.com/in/danishprakash/}{LinkedIn}}\vspace{1em}
-        
-    \resumeSubHeadingListEnd
-    
-    
-\lfoot{\scriptsize{\textcolor{mygray}{updated - 2018/11/17}}}
+    \small{\item{
+        \textb{\href{https://github.com/golang/tools/commit/0c506a27403cdd01a1a9f73f3e3ead148a0628d1}{\color{blue}Go}, \href{https://github.com/kubernetes/kubernetes/commit/f12325add3fbac8a2ce31cb12b4649c01d74f248}{\color{blue}Kubernetes}, \href{https://github.com/hashicorp/nomad/commit/ff6ae5fad2a98e6062563d289f7a769c14adadd7}{\color{blue}HashiCorp}, \href{https://github.com/Shopify/kubeaudit/commit/abd7f1240b41be7e12ea6d96e6b5b3d779d9bc2c}{\color{blue}Shopify}, and
+        \href{https://danishpraka.sh/software/}{\color{blue} more.}}
+    }}
+  \resumeSubHeadingListEnd
 
+\section{Skills}
+  \vspace{1pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{Back End:}{ Go, Python, GCP, AWS, GNU/Linux, Kubernetes, Runc, Docker, Jenkins, Terraform} \\
+       \textbf{Tools and Utilities}{: Git, Vim, Tmux} \\
+        \textbf{Languages:}{ Hindi (Native), English (Professional), German \& Japanese (Elementary)}
+        % \textbf{Frameworks}{: X, X, X} \\
+        % \textbf{Developer Tools}{: X, X, X} \\
+        % \textbf{Libraries}{: X, X, X} \\
+        % \textbf{Applications}{: X, X, X}
+    }}
+  \resumeSubHeadingListEnd
+
+
+
+%-----------CERTIFICATES-----------
+
+% \section{Certificates}
+%   \resumeSubHeadingListStart
+
+%     \resumeOrganizationHeading
+%       {Procter \& Gamble VIA Certificate Program}{Feb 2022}{Business Skills, Data and Digital Skills, Project Management and Personal Productivity}
+
+%   \resumeSubHeadingListEnd
+
+
+
+%-----------ORGANIZATIONS-----------
+
+% \section{Organizations}
+%   \resumeSubHeadingListStart
+
+%     \resumeOrganizationHeading
+%       {Institute of Electrical and Electronics Engineers (IEEE)}{Feb 2022 -- Present}{Student Member}
+
+%   \resumeSubHeadingListEnd
+
+
+
+%-----------HOBBIES-----------
+
+% \section{Hobbies}
+  % \resumeSubHeadingListStart
+    % \small{\item{Swimming, Fitness, Eight-ball}}
+  % \resumeSubHeadingListEnd
+
+
+
+%-----------REFERENCES-----------
+
+% \section{References}
+  % \resumeSubHeadingListStart
+
+  % \resumeSubHeadingListEnd
+
+
+
+%-------------------------------------------
 \end{document}
